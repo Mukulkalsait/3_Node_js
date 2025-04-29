@@ -15,3 +15,7 @@ var app = express(); //            Y: 2. OBJECT creation.
  * The word 'key' in the curly braces basically denotes
  * the variable which will be substituted by a value when the page is displayed.
  *  */
+
+app.set('view engine', 'jade'); //                                                                                        Y: 3. select engine
+app.get('/', function (req, res) {}); //        Y: 4. get fun(req, res)
+var server = app.listen(3000, function () {}); //                                 Y: 5. server= listen(3000, fun())
