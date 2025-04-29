@@ -1,22 +1,20 @@
 /* 1.older EXPLICIT method;
- *
  * var exports = modules.exports{};
  * exports.addNumber= function(a,b){ return a+b;};
- *
  *  Y: newer method
  * */
 
 module.exports = {
-  addNumber: function (a, b) {
+  addTwoNumber: function (a, b) {
     return a + b;
   },
-  subNumber: function (a, b) {
+  subTwoNumber: function (a, b) {
     return a - b;
   },
-  multiplyNumber: function (a, b) {
+  multiplyTwoNumber: function (a, b) {
     return a * b;
   },
-  divideNumber: function (a, b) {
+  divideTwoNumber: function (a, b) {
     return a / b;
   },
 };
