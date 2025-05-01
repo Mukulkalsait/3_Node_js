@@ -19,3 +19,9 @@ var app = express(); //            Y: 2. OBJECT creation.
 app.set('view engine', 'jade'); //                                                                                        Y: 3. select engine
 app.get('/', function (req, res) {}); //        Y: 4. get fun(req, res)
 var server = app.listen(3000, function () {}); //                                 Y: 5. server= listen(3000, fun())
+
+// Y:Practice
+// var experss = require('express');
+// var app =express();
+// app.set('view engin','jade')
+// app.get('/',function(req,res){ });
