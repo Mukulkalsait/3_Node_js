@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const taskServices = require('../services/taskServices.js');
 
+// G: Routes:
+
 // GET / → welcome page.
 router.get('/', (req, res) => {
   res.send('Welcome to Task Manager API');

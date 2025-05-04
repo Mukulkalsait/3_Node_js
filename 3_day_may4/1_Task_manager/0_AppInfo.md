@@ -27,3 +27,30 @@ taskId = 1
  curl -X DELETE http://localhost:3000/api/tasks/8
 
 taskId = 8
+
+<!--
+NOTE:
+========================
+1. While specifying method use
+  '-X' <method>
+2. -H = Header
+3. -d = Data
+-->
+
+<!--
+G:
+folderStracture
+-----------------------------------
+project/
+├── app.js
+├── routes/
+│   └── taskRoutes.js
+├── controllers/          {services in this app}
+│   └── taskController.js
+├── models/
+│   └── taskModel.js
+├── utils/
+│   └── cleanConsoleUtil.js
+│
+│
+-->

@@ -1,6 +1,8 @@
 const taskModel = require('../modules/taskModel');
 const loggerColor = require('../utils/cleanConsoleUtil.js');
 
+// G: Controllers
+
 function addNewTask(req, res) {
   const { title } = req.body;
   if (!title) return res.status(400).json({ error: 'Title required' }); // Y: 1
