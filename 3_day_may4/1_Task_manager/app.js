@@ -1,5 +1,5 @@
 const taskService = require('./services/taskServices.js');
-
+const logger = require('./services/logger.js');
 logger.log(` 🚀 App Started.`);
 
 // NOTE: OPTIONS:
