@@ -1,9 +1,9 @@
-var Addition = require('../1_day_29April/a_Module_math.js');
+var aModulemath = require('../1_day_29April/a_Module_math.js');
 
-console.log(Addition.addTwoNumber(23, 23));
-console.log(Addition.subTwoNumber(23, 23));
-console.log(Addition.multiplyTwoNumber(23, 23));
-console.log(Addition.divideTwoNumber(23, 23));
+console.log(aModulemath.addTwoNumber(23, 23));
+console.log(aModulemath.subTwoNumber(23, 23));
+console.log(aModulemath.multiplyTwoNumber(23, 23));
+console.log(aModulemath.divideTwoNumber(23, 23));
 
 // Y:
 // $ node app.js
