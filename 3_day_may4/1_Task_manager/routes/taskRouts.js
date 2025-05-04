@@ -3,6 +3,7 @@ const router = express.Router();
 const taskServices = require('../services/taskServices.js');
 
 // G: Routes:
+// syntex => app.METHOD(PATH, HANDLER).
 
 // GET / → welcome page.
 router.get('/', (req, res) => {
