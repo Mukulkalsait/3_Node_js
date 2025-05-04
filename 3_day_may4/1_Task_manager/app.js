@@ -1,26 +1,36 @@
-const taskService = require('./services/taskServices.js');
-const logger = require('./services/logger.js');
-logger.log(` 🚀 App Started.`);
+const express = require('express');
+const app = express();
+const taskRoutes = require('./routes/taskRouts.js');
+const loggerColor = require('./utils/cleanConsoleUtil.js'); // instead of ./services/logger.js
+loggerColor.success(` 🚀 App Started.`);
 
-// NOTE: OPTIONS:
-// --------------
-// addNewTask
-// listTask
-// completeTask
-// removeTask
-// --------------
+// taskService.addNewTask('Learn Node Js.');
+// taskService.addNewTask('Create Node App.');
+// taskService.addNewTask('Apply for dev Jobs.');
+// taskService.addNewTask('Learn React and natvie');
+// taskService.addNewTask('Clear RHCSA Before JUNE 30');
+// taskService.addNewTask('Learn RUST');
+// taskService.addNewTask('dummy');
+// taskService.listTask();
+//
+// taskService.completeTask(2);
+// taskService.listTask();
+//
+// taskService.removeTask(7);
+// taskService.listTask();
 
-taskService.addNewTask('Learn Node Js.');
-taskService.addNewTask('Create Node App.');
-taskService.addNewTask('Apply for dev Jobs.');
-taskService.addNewTask('Learn React and natvie');
-taskService.addNewTask('Clear RHCSA Before JUNE 30');
-taskService.addNewTask('Learn RUST');
-taskService.addNewTask('dummy');
-taskService.listTask();
+app.use(express.json()); // 🔥  Y: Built-in middleware for JSON
 
-taskService.completeTask(2);
-taskService.listTask();
+app.use('/api', taskRoutes);
 
-taskService.removeTask(7);
-taskService.listTask();
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`server is running at: http://localhost:${PORT}`);
+});
+
+// NOTE:
+// const bodyParser = require('body-parser');
+// const app = express();
+// app.use(bodyParser.json());
+//
+//

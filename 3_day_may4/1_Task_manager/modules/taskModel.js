@@ -4,7 +4,7 @@ function createTask(title) {
   const stmt = db.prepare('INSERT INTO tasks (title) VALUES (?)');
   return stmt.run(title);
 }
-function getAllTaks() {
+function getAllTasks() {
   const stmt = db.prepare('SELECT * FROM tasks');
   return stmt.all();
 }
@@ -19,7 +19,7 @@ function deleteTask(id) {
 
 module.exports = {
   createTask,
-  getAllTaks,
+  getAllTasks,
   markDone,
   deleteTask,
 };

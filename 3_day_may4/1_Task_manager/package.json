@@ -11,6 +11,9 @@
   "license": "ISC",
   "packageManager": "pnpm@10.7.1",
   "dependencies": {
-    "better-sqlite3": "^11.9.1"
+    "better-sqlite3": "^11.9.1",
+    "chalk": "^5.4.1",
+    "colors": "^1.4.0",
+    "express": "^5.1.0"
   }
 }
