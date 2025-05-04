@@ -7,12 +7,16 @@ const formatIST = (date, time) => {
     hour: '2-digit,',
     minut: '2-digit',
     second: '2-digit',
-    ...options,
+    ...option,
   });
 
-const parts = formatter.formatToParts(date){ 
-    return format.replace('DD', parts.find( p=> p.type === 'day').value)
-  }
-
-
+  const parts = formatter.formatToParts(date);
+  return format
+    .replace('DD', parts.find((p) => p.type === 'day').value)
+    .replace('MM', parts.find((p) => p.type === 'month').value)
+    .replace('YYYY', parts.find((p) => p.type === 'year').value);
 };
+
+const getToday = () => formatIST(new Date(), 'DD-MM-YYYY');
+
+module.exports = { formatIST, getToday };
