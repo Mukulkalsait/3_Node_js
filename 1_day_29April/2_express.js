@@ -1,5 +1,25 @@
-var express = require('express'); //     Y: 1. require calling.
-var app = express(); //            Y: 2. OBJECT creation.
+var express = require('express');
+// Y: 1. 'require' is used to import the Express module.`pnpm add express` Express provides tools for building web servers and APIs.
+
+var appWebServer = express();
+// Y: 2. Create an instance of the Express application. `appWebServer` now represents our server instance.
+
+appWebServer.set('view engine', 'jade');
+// Y: 3. Set 'jade' as the view engine. Jade (now called 'pug') is used to render HTML templates dynamically. You should also install it using: `pnpm add jade` or `pnpm add pug` (and rename it if needed).
+
+appWebServer.get('/', function (req, res) {
+  res.send('Hello from Express!');
+});
+// Y: 4. Register a GET route for path '/'.
+// When a user visits localhost:3000/, this function runs.
+// `req` = incoming request, `res` = outgoing response.
+// Currently, the handler is empty—nothing will be shown.
+
+var server = appWebServer.listen(3000, function () {
+  console.log('Server is running on http://localhost:3000');
+});
+// Y: 5. Start the server and make it listen on port 3000.
+// The second function (callback) runs once the server is ready.
 
 /* NOTE:  now once 1 and 2 are Done.
  *  module can be INVOKED.
@@ -15,13 +35,3 @@ var app = express(); //            Y: 2. OBJECT creation.
  * The word 'key' in the curly braces basically denotes
  * the variable which will be substituted by a value when the page is displayed.
  *  */
-
-app.set('view engine', 'jade'); //                                                                                        Y: 3. select engine
-app.get('/', function (req, res) {}); //        Y: 4. get fun(req, res)
-var server = app.listen(3000, function () {}); //                                 Y: 5. server= listen(3000, fun())
-
-// Y:Practice
-// var experss = require('express');
-// var app =express();
-// app.set('view engin','jade')
-// app.get('/',function(req,res){ });
