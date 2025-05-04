@@ -16,7 +16,7 @@ appWebServer.get('/', function (req, res) {
 // Currently, the handler is empty—nothing will be shown.
 
 var server = appWebServer.listen(3000, function () {
-  console.log('Server is running on http://localhost:3000');
+  console.log('Server is running on http://localhost:3000/');
 });
 // Y: 5. Start the server and make it listen on port 3000.
 // The second function (callback) runs once the server is ready.
@@ -35,3 +35,15 @@ var server = appWebServer.listen(3000, function () {
  * The word 'key' in the curly braces basically denotes
  * the variable which will be substituted by a value when the page is displayed.
  *  */
+
+// DX:
+// practice
+// var express = require('express');
+// var appWebServer = express();
+// appWebServer.set('view engin', 'jade');
+// appWebServer.get('/', function (req, res) {
+//   res.send('hello from express?');
+// });
+// var server = appWebServer.listen(300, function () {
+//   console.log('server is running on localhost:3000/');
+// });
