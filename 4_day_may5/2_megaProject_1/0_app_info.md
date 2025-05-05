@@ -42,13 +42,26 @@
 
 # Understanding workflow
 
-- 111 : api/controllers/shortener.controller.js →
-  Express route handlers (controllers) These are functions that: ==> The bridge between the web/API interface and core logic.
+======================================================================================================================================================
 
-      Handle requests from the browser or API client
-      Extract inputs from req.body or req.params
-      Call business logic (from src/shortener/index.js)
-      Return responses (res.json, res.redirect)
+### 111 : api/controllers/shortener.controller.js →
+
+## Express route handlers (controllers) These are functions that: (The bridge between the web/API interface and core logic.)
+
+    1. Handle requests from the browser or API client
+    2. Extract inputs from req.body or req.params
+    3. Call business logic (from src/shortener/index.js)
+    4. Return responses (res.json, res.redirect)
+
+## FUN:
+
+1.  Function that interect with web:
+    a. check header,
+    b.try to chorten link {shortnre.creteChortLink}. result in shortcode or error.
+2.  INTERACT WITH WEB :=> Saves parameter in 'code' => fetch from {shorotener.getOrignalUrl}, or 404. => redirect to URL.
+3.  when requested => give whole list.
+
+======================================================================================================================================================
 
 - 31 : config/db.config.js →
   Database connection
@@ -71,3 +84,8 @@
       Create short links (createShortLink)
       Retrieve original URLs from a short code (getOriginalUrl)
       List all links (list Links)
+
+      * FUN:
+      *     1. takes orignal url -> use module nanoid -> insert into db( links ) return shortcode.
+      *     2. takes shortcoe and return row, or null.
+      *     3. return list of all links and shortlinsk.
