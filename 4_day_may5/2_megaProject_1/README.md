@@ -1,17 +1,6 @@
 <!--
 Y:
-/
-├── src/
-│ ├── shortener/ # Link shortener logic
-│ │ └── index.js
-│ ├── vault/ # Password vault logic
-│ │ └── index.js
-│ └── utils/ # Common utilities (e.g., ID gen, crypto)
-│ └── logger.js
-│
-├── cli/
-│ ├── shortener.js # CLI for link shortener
-│ └── vault.js # CLI for password vault
+<!--
 │
 ├── api/
 │ ├── routes/
@@ -21,23 +10,38 @@ Y:
 │ │ ├── shortener.controller.js
 │ │ └── vault.controller.js
 │ ├── middleware/
-│ └── app.js # Express app
+│ └── app.js
+├── cli/
+│ ├── shortener.js
+│ └── vault.js
 │
 ├── config/
 │ ├── db.config.js
 │ ├── env.config.js
 │ └── logger.config.js
 │
-├── services/
-│ └── email.service.js # Placeholder for future
-│
-├── models/ # For any SQLite schemas
+├── models/
 │ ├── shortener.model.js
 │ └── vault.model.js
+│
+├── services/
+│ └── email.service.js
+│
+├── src/
+│ ├── shortener/
+│ │ └── INDEX.JS
+│ ├── vault/
+│ │ └── index.js
+│ └── utils/
+│ └── logger.js
+│
+----------------------------------------
 │
 ├── .env
 ├── package.json
 └── README.md
+-->
+
 -->
 
 # /src/shortener/index.js: 🔧 Responsibilities =>
