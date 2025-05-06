@@ -70,6 +70,10 @@
         Makes a single connection (db) and exports it for use in your app
         This is used everywhere DB is needed (like src/, models/)
 
+## DATABASE require, db Create with name "app.db" and exported.
+
+======================================================================================================================================================
+
 - 42 : models/shortener.model.js →
   DB schema / migrations
 
@@ -78,6 +82,10 @@
       Only concerned with table structure, not data
       You can call this file once when initializing the app or importing from somewhere like api/app.js (we'll get there)
 
+## We create 'links ' table inside app.db in this table.
+
+======================================================================================================================================================
+
 - 661 : src/shortener/index.js →
   Business logic (core functions) This module contains pure logic to: This is reusable logic, independent of CLI or HTTP.
 
@@ -85,7 +93,8 @@
       Retrieve original URLs from a short code (getOriginalUrl)
       List all links (list Links)
 
-      * FUN:
+  ## FUN:
+
       *     1. takes orignal url -> use module nanoid -> insert into db( links ) return shortcode.
       *     2. takes shortcoe and return row, or null.
       *     3. return list of all links and shortlinsk.

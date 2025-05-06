@@ -97,4 +97,49 @@ NOTE:
 |--------------------------------------------------------------------|
     * HERE: title will be shown on tab bar , and message in browser.
 
+
+
+B:
+✅ 2. What is SQLite? And how is it different from MySQL / MongoDB?
++--------------+--------------------------------+---------------------------------+--------------------------------+
+|   Feature    |             SQLite             |        MySQL/PostgreSQL         |        MongoDB (NoSQL)         |
++--------------+--------------------------------+---------------------------------+--------------------------------+
+| Type         | Relational (SQL)               | Relational (SQL)                | Document-based (NoSQL)         |
+| Installation | File-based, zero-setup         | Needs a server (mysql/postgres) | Needs MongoDB server           |
+| Speed        | Fast for small/local apps      | Great for large-scale systems   | Great for dynamic schema, JSON |
+| Storage      | Single .db file                | Multi-user server-based         | BSON (JSON-like) documents     |
+| Schema       | Strict schema                  | Strict schema                   | Flexible schema (schema-less)  |
+| Use case     | CLI tools, local apps, testing | Large apps, enterprise software | Real-time apps, flexible data  |
++--------------+--------------------------------+---------------------------------+--------------------------------+
+
+P1c: a. SQLite :  in-process library that implements a self-contained, server less, zero-configuration, transactional SQL database engine.
+G: Features:
+--------------------------
+  1. No separate server process.
+  2. Reads and writes directly to ordinary disk files.
+  3. Complete SQL database with multiple tables, indices, triggers, and views, is contained in a single disk file.
+  4. Faster than direct file system I/O. (in fact more memory more faster.).
+  5. Reliable : millions of tests before every release covering 100% scenarios.
+  6. Backward Compatible.
+
+G: Use Cases:
+--------------------------
+  1. IOT & impeded devices:
+      - no need ho human interfair
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -->
