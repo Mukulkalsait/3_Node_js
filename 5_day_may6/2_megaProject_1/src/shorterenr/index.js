@@ -37,7 +37,6 @@ module.exports = {
  *
  * FUN:
  *     1. takes orignal url -> use module nanoid -> insert into db( links ) return shortcode.
- *     2.
- *
- *
+ *     2. takes shortcoe and return row, or null.
+ *     3. return list of all links and shortlinsk.
  * */
